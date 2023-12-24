@@ -169,11 +169,4 @@ if __name__ == '__main__':
 
     # db_obj = MySQL_DB(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME)
     # db_obj.add_record(DB_TABLE,"Friends","Sitcom","1994")
-
-    # print(db_obj.get_databases())
-    # db_obj.add_record('cars','2023-04-07','2017','Kia','Picanto',35000,'used','KIA Lanka',4.8,1000,20000)
-    # print(db_obj.get_all_items('cars'))
-    # print(db_obj.get_items_by_make('cars','Toyota'))
-    # print(db_obj.get_items_by_id('cars',22))
-    # print(db_obj.get_record_count('cars'))
     
