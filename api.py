@@ -71,7 +71,7 @@ class Update_Delete_Movies_By_Id(Resource):
                 data = api.payload          # Get data sent through POST (Dictionary data type)
                 # Values
                 name,genre,year = data['name'],data['genre'],data['year']
-                db_obj.update_record(DB_TABLE,name,genre,year)
+                db_obj.update_record(DB_TABLE,id,name,genre,year)
                 db_obj.close_connection()
                 return get_post_cors({'result':"updated movie"},201)
             else:

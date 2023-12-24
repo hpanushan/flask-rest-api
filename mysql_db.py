@@ -136,11 +136,12 @@ class MySQL_DB:
         elif len(records) == 0:
             return False
         
-    def update_record(self,table_name,name,genre,year):
+    def update_record(self,table_name,id,name,genre,year):
         logging.info("update record function")
         cursor = self.connection.cursor()
         # Execute the query
-        query = """UPDATE `{}` SET name=%s,genre=%s,year=%s""".format(table_name)
+        query = """UPDATE `{}` SET name=%s,genre=%s,year=%s
+                    WHERE id={}""".format(table_name,id)
         val = (name,genre,year)
         
         cursor.execute(query, val)
